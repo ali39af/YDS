@@ -1,13 +1,4 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?path=$1 [QSA,L]
-
-# Set Error 403
-ErrorDocument 403 /index.php?error=403
-
-# Set Error 404
-ErrorDocument 404 /index.php?error=404
-
-# Set Error 500
-ErrorDocument 500 /index.php?error=500
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
